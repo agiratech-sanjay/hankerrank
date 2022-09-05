@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // day 5 part-1
+    Rectangle.prototype.area=function(){
+    return this.h*this.w;
+ }
+
+    class Square extends Rectangle{
+        constructor(side){
+            super(side,side);
+        }
+    }
+
+    // day-5 part-2
+    function sides(literals, ...expressions) {
+   let s1=Math.floor((expressions[1]+Math.sqrt((expressions[1]*expressions[1]-(16*expressions[0]))))/4);
+   let s2=Math.floor((expressions[1]-Math.sqrt((expressions[1]*expressions[1]-(16*expressions[0]))))/4);
+   let arr=[s1,s2].sort();
+   return arr;
+}
+
+
+
+    // day-5 part-3
+
+  var z="2 8 5 8 7 8 3";
+    let x=z.split(" ");
+    // console.log(z);
+    // x.toString();
+    // console.log(x.length);
+    for(let i=0;i<x.length;i++){
+        if(((x[i])%2)==0){
+            console.log(x[i]*2);
+        }
+            // }else if(((x[i])%2)!=0){
+        else{
+                console.log(x[i]*3)
+        }
+    }
+    </script>
+    
+</body>
+</html>

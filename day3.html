@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // day-3 part 1
+        function getSecondLargest(nums) {
+    // Complete the function
+    nums.sort(function(a,b){return b-a}); 
+    let secondlargest = [...new Set(nums)];
+    return secondlargest[1];
+}
+        // day-3 part-2
+        let str=s;
+    try{
+        str=s.split("").reverse().join("");
+    }catch(error){
+        console.log(error.message);
+    }
+    finally{
+        console.log(str);
+    }
+
+    // day-3 part-3
+    function isPositive(a) {
+    if(a>0)return "YES";
+    else if(a==0)throw new Error("Zero Error");
+    else throw new Error("Negative Error");
+}
+
+
+    </script>
+</body>
+</html>

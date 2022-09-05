@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // day 6 part-1
+        function getMaxLessThanK(n, k) {
+    let maxNum = 0;
+
+    for (let i=1;i<=n;i++) {
+        for (let j=i+1;j<= n;j++) {
+            let exp =i&j;
+
+            if(exp < k && exp > maxNum)
+              maxNum=exp;
+        }
+    }
+ 
+    return maxNum;
+}
+
+       //day6 part-2
+       function getDayName(dateString) {
+    let dayName;
+    // Write your code here
+    let date = new Date(dateString);
+    switch(date.getDay()){
+        case 0:dayName="Sunday";break;
+        case 1:dayName="Monday";break;
+        case 2:dayName="Tuesday";break;
+        case 3:dayName="Wednesday";break;
+        case 4:dayName="Thursday";break;
+        case 5:dayName="Friday";break;
+        case 6:dayName="Saturday";break;
+    }
+    
+    return dayName;
+}
+    </script>
+</body>
+</html>
